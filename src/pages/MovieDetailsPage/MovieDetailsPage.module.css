@@ -1,0 +1,52 @@
+.detailsWrap {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.heading {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  text-align: center;
+  color: #2e2f42;
+  margin-bottom: 40px;
+}
+.textWrap {
+  display: flex;
+  gap: 30px;
+}
+
+.subtitle {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+}
+
+.text {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.list {
+  display: flex;
+  gap: 10px;
+}
+
+.navDetails {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 30px;
+}
+
+.active {
+  color: rgb(142, 7, 7);
+  font-weight: bold;
+}

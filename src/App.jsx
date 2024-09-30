@@ -1,30 +1,27 @@
-import { useEffect, useState } from "react";
-import fetchFilm from "./services/api";
-import { Link } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import HomePage from "./pages/HomePage/HomePage";
+import MoviesPage from "./pages/MoviesPage/MoviesPage";
+import MovieDetailsPage from "./pages/MovieDetailsPage/MovieDetailsPage";
+import MovieCast from "./components/MovieCast/MovieCast";
+import MovieReviews from "./components/MovieReviews/MovieReviews";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
+
+import Navigation from "./components/Navigation/Navigation";
 
 function App() {
-  const [films, setFilms] = useState([]);
-
-  useEffect(() => {
-    const getData = async () => {
-      const { data } = await fetchFilm();
-      setFilms(data.results);
-    };
-    getData;
-  }, []);
-
   return (
     <>
-      <ul>
-        {films.map((film) => (
-          <li key={film.id}>
-            <Link to={film.id.toString()}>
-              <p>{film.name}</p>
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/movies" element={<MoviesPage />} />
+        <Route path="/movies/:movieId" element={<MovieDetailsPage />}>
+          <Route path="cast" element={<MovieCast />} />
+          <Route path="reviews" element={<MovieReviews />} />
+        </Route>
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
     </>
   );
 }
