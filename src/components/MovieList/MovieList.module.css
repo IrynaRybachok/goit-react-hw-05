@@ -1,7 +1,7 @@
 .list {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px 91px;
+  gap: 30px 88px;
   justify-content: start;
   align-items: center;
   padding-bottom: 10px;
