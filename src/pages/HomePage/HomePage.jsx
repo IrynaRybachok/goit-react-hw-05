@@ -28,12 +28,12 @@ const HomePage = () => {
   }, []);
 
   return (
-    <>
+    <div className={s.container}>
       <h2 className={s.title}>Trending today</h2>
       {isLoading && <Loader />}
       {films?.length > 0 && <MovieList films={films} />}
       {isError && <ErrorMessage />}
-    </>
+    </div>
   );
 };
 

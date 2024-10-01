@@ -47,7 +47,7 @@ const MoviesPage = () => {
   };
 
   return (
-    <>
+    <div className={s.container}>
       <SearchBar setQuery={handleChangeQuery} />
       {isError && <ErrorMessage />}
       {isLoading && <Loader />}
@@ -57,7 +57,7 @@ const MoviesPage = () => {
           Next
         </button>
       )}
-    </>
+    </div>
   );
 };
 export default MoviesPage;

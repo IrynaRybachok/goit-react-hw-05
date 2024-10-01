@@ -1,5 +1,5 @@
-import s from "./MovieCard.module.css";
-const MovieCard = ({
+import s from "./MovieItem.module.css";
+const MovieItem = ({
   data: { poster_path, title, vote_average, release_date },
 }) => {
   const urlImage = poster_path
@@ -18,4 +18,4 @@ const MovieCard = ({
     </div>
   );
 };
-export default MovieCard;
+export default MovieItem;

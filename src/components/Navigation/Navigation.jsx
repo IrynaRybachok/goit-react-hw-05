@@ -9,19 +9,21 @@ const Navigation = () => {
   return (
     <header className={s.header}>
       <div className={s.container}>
-        <div className={s.logo}>MovieWave</div>
-        <ul className={s.nav}>
-          <li>
-            <NavLink className={buildLinkClass} to="/">
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink className={buildLinkClass} to="/movies">
-              Movies
-            </NavLink>
-          </li>
-        </ul>
+        <div className={s.box}>
+          <div className={s.logo}>MovieWave</div>
+          <ul className={s.nav}>
+            <li>
+              <NavLink className={buildLinkClass} to="/">
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink className={buildLinkClass} to="/movies">
+                Movies
+              </NavLink>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
   );

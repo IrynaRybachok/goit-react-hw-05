@@ -59,3 +59,22 @@ export const fetchFilmById = async (movie_id, word = "") => {
       throw err;
     });
 };
+
+export const fetchFilmReviews = async (movie_id, page = 1) => {
+  const url = `https://api.themoviedb.org/3/movie/${movie_id}/reviews?language=en-US&page=${page}`;
+  const options = {
+    headers: {
+      // Замість api_read_access_token вставте свій токен
+      Authorization: `Bearer ${TOKEN}`,
+    },
+  };
+  return axios
+    .get(url, options)
+    .then((response) => {
+      return response.data;
+    })
+    .catch((err) => {
+      console.error(err);
+      throw err;
+    });
+};
