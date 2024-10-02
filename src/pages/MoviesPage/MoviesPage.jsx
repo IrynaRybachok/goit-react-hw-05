@@ -40,6 +40,8 @@ const MoviesPage = () => {
     }
     searchParams.set("query", newQuery);
     setSearchParams(searchParams);
+    setFilms([]);
+    setPage(1);
   };
 
   const handleNextPage = () => {
