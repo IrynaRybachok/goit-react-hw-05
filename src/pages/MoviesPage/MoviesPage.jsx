@@ -51,8 +51,8 @@ const MoviesPage = () => {
       <SearchBar setQuery={handleChangeQuery} />
       {isError && <ErrorMessage />}
       {isLoading && <Loader />}
-      <MovieList films={films} />
-      {page < totalPages && (
+      {films.length > 0 && <MovieList films={films} />}
+      {films.length > 0 && page < totalPages && (
         <button className={s.btn} onClick={handleNextPage}>
           Next
         </button>
